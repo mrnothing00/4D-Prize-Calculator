@@ -1,56 +1,51 @@
-# Welcome to your Expo app 👋
+# 4D Prize Calculator 🎯
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A **React Native (Expo)** mobile app that instantly calculates Malaysian **4D lottery prizes**
+for any 4-digit number across all bet types — **Straight, iBox, and Box**. Published on the
+**Google Play Store**.
 
-## Get started
+> A utility/educational tool for calculating potential prize amounts. It does not facilitate
+> gambling, sell tickets, or connect to any lottery operator — all calculations run on-device.
 
-1. Install dependencies
+## ✨ Features
+- 🧮 Calculate prizes for **Straight, iBox, and Box** bets
+- 💵 Independent **Big (ABC)** and **Small (A)** bet amounts, with combined totals
+- 🏆 Full prize breakdown — 1st, 2nd, 3rd, Special & Consolation
+- 🔁 Automatic **permutation detection** (24 / 12 / 6 / 4 / 1)
+- 🧾 Live ticket-cost preview before calculating
+- 🕘 **Calculation history** — recall and reload past calculations
+- 🌐 **Bilingual** — English & Chinese (中文)
+- 📴 Works fully **offline**
+- Works for Magnum, Toto, Damacai, CashSweep, Sabah 88, Sandakan and other MY operators
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tech stack
+React Native · **Expo** · TypeScript · Expo Router (file-based routing) · i18n (EN/中文) ·
+Jest (unit tests) · Google AdMob
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 📂 Project structure
+```
+src/
+  app/          # Expo Router screens (file-based routing)
+  components/   # UI: AmountInput, BetTypeSelector, ResultsDisplay, HistoryBottomSheet, AdBanner…
+  screens/      # CalculatorScreen
+  utils/        # calculator logic (+ __tests__), history, ads
+  data/         # 4D prize tables
+  i18n/         # LanguageContext + translations (English / 中文)
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Getting started
+```bash
+npm install
+npx expo start
+```
 
-### Other setup steps
+## 🔐 Note for this public copy
+This is a **sanitized copy** of the production app. The **AdMob IDs** in `app.json` and
+`src/components/AdBanner.tsx` are placeholders (`ca-app-pub-0000...`) — replace them with your
+own to enable ads. Signing keystores and credentials are **not** included.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 📱 Availability
+Published on **Google Play** as *4D Prize Calculator* — version 1.1.1.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## ⚖️ Disclaimer
+For informational and educational purposes only. Not affiliated with any lottery operator.
