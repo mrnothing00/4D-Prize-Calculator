@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "4D Prize Calculator",
+    "slug": "MY4DCalc",
+    "version": "1.1.1",
+    "orientation": "default",
+    "icon": "./assets/4D_Prize_Calculator_1024x1024.png",
+    "scheme": "my4dcalc",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-image.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFD600"
+    },
+    "ios": {
+      "bundleIdentifier": "com.my4dcalc.app",
+      "buildNumber": "1",
+      "icon": "./assets/4D_Prize_Calculator_1024x1024.png",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This app does not track you."
+      }
+    },
+    "android": {
+      "package": "com.my4dcalc.app",
+      "versionCode": 4,
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFD600"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/4D_Prize_Calculator_512x512.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-0000000000000000~0000000000"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFD600",
+          "image": "./assets/splash-image.png",
+          "resizeMode": "contain",
+          "android": {
+            "backgroundColor": "#FFD600",
+            "resizeMode": "contain"
+          }
+        }
+      ],
+      "expo-video"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
